@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="card col-3" style="width: 18rem" *ngFor="let el of data$ | async">
+    <div class="card-body">
+      <h5 class="card-title">{{ el.name }} - {{ el.species }}</h5>
+      <ul>
+        <li><p class="card-text">{{ el.birth_year }}</p></li>
+        <li><p class="card-text">{{ el.gender }}</p></li>
+        <li><p class="card-text">{{ el.created }}</p></li>
+        <li><p class="card-text">{{ el.hair_color }}</p></li>
+        <li><p class="card-text">{{ el.height }}</p></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<button (click)="onNextPage()">Next</button>
